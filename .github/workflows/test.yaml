@@ -48,7 +48,7 @@ jobs:
           curl -fO https://repo.phdata.io/yDr95R4UUTucC9DR/toolkit-cli/maven/io/phdata/toolkit/toolkit-cli/0.23.1/toolkit-cli-0.23.1.zip
           unzip toolkit-cli-0.23.1.zip
           pwd
-          export PATH=$PATH:/home/runner/work/FCB_REPO/FCB_REPO/toolkit-cli-0.23.1
+          export PATH=$PATH:/home/runner/work/provision_tool_test/provision_tool_test/toolkit-cli-0.23.1
                     
           pwd
           ls
