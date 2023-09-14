@@ -4,9 +4,9 @@ name: prod_plan
 
 # Controls when the workflow will run
 on:
-  push:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main
   pull_request:
     branches:
       - test2
