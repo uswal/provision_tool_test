@@ -54,5 +54,11 @@ jobs:
                     
           pwd
           ls
-          toolkit provision apply --plan         
 
+          
+          # Check if the branch is not "main" before adding "--plan"
+          if [ "${{ github.ref }}" != "refs/heads/main" ]; then
+            toolkit provision apply --plan
+          else
+            toolkit provision apply
+          fi
