@@ -45,6 +45,8 @@ jobs:
           echo "---------Local variables----------"
           echo "$PROVISION_SNOWFLAKE_URL"
           echo "$PROVISION_USER"
+          echo "${{ vars.TRAM_SNOWFLAKE_URL }}"
+          echo "###########################################################"
           curl -fO https://repo.phdata.io/yDr95R4UUTucC9DR/toolkit-cli/maven/io/phdata/toolkit/toolkit-cli/0.23.1/toolkit-cli-0.23.1.zip
           unzip toolkit-cli-0.23.1.zip
           pwd
