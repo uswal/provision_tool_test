@@ -4,11 +4,12 @@ name: prod_plan
 
 # Controls when the workflow will run
 on:
-  workflow_run:
-    workflows: ["*"]
-    types:
-      - completed
-
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - test2
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -52,11 +53,6 @@ jobs:
           pwd
           ls
 
-          if [ "${{ github.event.workflow_run.event }}" == "push" ] && [ "${{ github.event.workflow_run.head_branch }}" != "main" ]; then
-            echo "Branch ${{ github.event.workflow_run.head_branch }} was merged to main"
-            toolkit provision apply
-          else
-            echo "Branch was not merged to main"
-          fi
+          toolkit provision apply
 
           
